@@ -6,5 +6,7 @@
  */
 
 int esha(100);
+int g;
+
 
 
