@@ -9,7 +9,9 @@
 #ifndef SimulationAgent_hpp
 #define SimulationAgent_hpp
 
-#include "Process.h"
+#include <vector>
+
+class Process; // déclaration avancée
 
 class SimulationAgent
 {
@@ -20,7 +22,7 @@ class SimulationAgent
     ~SimulationAgent();
     
     private :
-    vector<Process*> m_simulation;
+    std::vector<Process*> m_simulation;
     
 };
 
