@@ -26,6 +26,7 @@ public:
 
 private:
 
-   int lol;
+   double m_i_phen;
+   double m_i_ctrl;
 };
 
