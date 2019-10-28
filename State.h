@@ -26,5 +26,6 @@ public:
 
 private:
 
+   int lol;
 };
 
