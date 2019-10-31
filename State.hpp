@@ -1,9 +1,16 @@
-/*
- * State.hpp
- *
- *  Created on: Oct 28, 2019
- *      Author: pcoo59
- */
+/*!
+* \file    State.hpp
+*
+* \brief   .
+*
+*
+* \authors  Sharma, Torchet,
+*                Esha, Tristan,
+*                esha.sharma@epfl.ch
+*                tristan.torchet@epfl.ch
+*
+* \date     28/10/2019
+*/
 
 #ifndef State_hpp
 #define State_hpp
