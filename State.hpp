@@ -1,18 +1,12 @@
 /*
- * State.h
+ * State.hpp
  *
  *  Created on: Oct 28, 2019
  *      Author: pcoo59
  */
 
-#ifndef SOURCES_STATE_H_
-#define SOURCES_STATE_H_
-
-
-
-
-
-#endif /* SOURCES_STATE_H_ */
+#ifndef State_hpp
+#define State_hpp
 
 #include"Process.h"
 #include <iostream>
@@ -29,4 +23,9 @@ private:
    double m_i_phen;
    double m_i_ctrl;
 };
+
+
+#endif /* State_hpp */
+
+
 

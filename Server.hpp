@@ -1,15 +1,15 @@
 /*
- * Server.h
+ * Server.hpp
  *
  *  Created on: Oct 28, 2019
  *      Author: pcoo59
  */
 
-#ifndef SOURCES_SERVER_H_
-#define SOURCES_SERVER_H_
+#ifndef Server_hpp
+#define Server_hpp
 
 
 
 
 
-#endif /* SOURCES_SERVER_H_ */
+#endif /* Server_hpp */

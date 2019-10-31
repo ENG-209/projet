@@ -1,12 +1,12 @@
 /*
- * Process.h
+ * Process.hpp
  *
  *  Created on: Oct 21, 2019
  *      Author: pcoo59
  */
 
-#ifndef SOURCES_PROCESS_H_
-#define SOURCES_PROCESS_H_
+#ifndef Process_hpp
+#define Process_hpp
 
 class Process{
    
@@ -17,16 +17,9 @@ protected:
    
 
 
-
-
-
-
-
-
 };
 
 
 
 
-#endif /* SOURCES_PROCESS
-_H_ */
+#endif /* Process_hpp */

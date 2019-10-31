@@ -1,20 +1,14 @@
 /*
- * Phenomenon.h
+ * Phenomenon.hpp
  *
  *  Created on: Oct 28, 2019
  *      Author: pcoo59
  */
 
-#ifndef SOURCES_PHENOMENON_H_
-#define SOURCES_PHENOMENON_H_
+#ifndef Phenomenon_hpp
+#define Phenomenon_hpp
 
-
-
-
-
-#endif /* SOURCES_PHENOMENON_H_ */
-
-#include"Process.h"
+#include "Process.hpp"
 #include <iostream>
 using namespace std;
 
@@ -29,4 +23,8 @@ private:
 
 
 };
+
+#endif /* Phenomenon_hpp */
+
+
 
