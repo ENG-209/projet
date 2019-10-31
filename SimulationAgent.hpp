@@ -1,10 +1,16 @@
-//
-//  SimulationAgent.hpp
-//  Projet
-//
-//  Created by Tristan Torchet on 28/10/2019.
-//  Copyright © 2019 Tristan Torchet. All rights reserved.
-//
+/*!
+* \file    SimulationAgent.hpp
+*
+* \brief   .
+*
+*
+* \authors  Sharma, Torchet,
+*                Esha, Tristan,
+*                esha.sharma@epfl.ch
+*                tristan.torchet@epfl.ch
+*
+* \date     28/10/2019
+*/
 
 #ifndef SimulationAgent_hpp
 #define SimulationAgent_hpp
