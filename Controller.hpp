@@ -1,18 +1,19 @@
-/*
- * Controller.h
- *
- *  Created on: Oct 28, 2019
- *      Author: pcoo59
- */
+/*!
+* \file    Controller.hpp
+*
+* \brief   .
+*
+*
+* \authors  Sharma, Torchet,
+*                Esha, Tristan,
+*                esha.sharma@epfl.ch
+*                tristan.torchet@epfl.ch
+*
+* \date     28/10/2019
+*/
 
-#ifndef SOURCES_CONTROLLER_H_
-#define SOURCES_CONTROLLER_H_
-
-
-
-
-
-#endif /* SOURCES_CONTROLLER_H_ */
+#ifndef Controller_hpp
+#define Controller_hpp
 
 #include <iostream>
 #include"Process.h"
@@ -29,3 +30,5 @@ private:
    double m_ctrl_value;
 
 };
+
+#endif /* Controller_hpp */

@@ -15,20 +15,28 @@
 #ifndef State_hpp
 #define State_hpp
 
-#include"Process.h"
-#include <iostream>
-using namespace std;
+#include <iostream> 
+#include "Process.hpp"
+using namespace std; 
 
 class State : public Process
 {
-
-public:
-
-
-private:
-
-   double m_i_phen;
-   double m_i_ctrl;
+	
+	public: 
+	
+	State();
+	
+	void put(int val); //recoit la valeur depuis Phenomenon et la stocke.
+	
+	private: 
+	
+	double m_init_state;
+	double m_final_state;
+	double m_phen_factor;
+	double m_ctrl_factor;
+	double m_phen_val; 
+	
+	
 };
 
 
