@@ -19,28 +19,26 @@
 #include "Controller.hpp"
 #include "Server.hpp"
 
-SimulationAgent::SimulationAgent()
+SimulationAgent::SimulationAgent(int sizeSimulation) : m_sizeSimulation(sizeSimulation)
 {}
 
-void SimulationAgent::initializationOfSimulation(int sizeSimulation)
+void SimulationAgent::initializationOfSimulation()
 {
     
-    vector<Process*> simulation(sizeSimulation);
-    
-    for ( int i(0); i < sizeSimulation-1; i+=3)
+    for ( int i(0); i < m_sizeSimulation-1; i+=3)
     {
-        simulation[i] = new Phenomenon();
-        simulation[i+1] = new State();
-        simulation[i+2] = new Controller();
+        m_simulation[i] = new Phenomenon();
+        m_simulation[i+1] = new State();
+        m_simulation[i+2] = new Controller();
     }
     
-    simulation[sizeSimulation-1] = new Server();
+    m_simulation[m_sizeSimulation-1] = new Server();
 }
 
-void SimulationAgent::runSimulation(int sizeSimulation)
+void SimulationAgent::runSimulation()
 {
-    for ( int i(0); i < sizeSimulation; i++)
+    for ( int i(0); i < m_sizeSimulation; i++)
     {
-        simulation[i]->run();
+        m_simulation[i]->run();
     }
 }

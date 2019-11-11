@@ -20,17 +20,20 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     int nbProcess(1);
-    int tailleSimulation(nbProcess*3 + 1); //sera remplacé par la methode XML
+    int sizeSimulation(nbProcess*3 + 1); //sera remplacé par la methode XML
    
-    SimulationAgent SimulationAgent;
+    SimulationAgent SimulationAgent(sizeSimulation);
     
-    SimulationAgent.initializationOfSimulation(tailleSimulation);
+    SimulationAgent.initializationOfSimulation();
+    
+    SimulationAgent.runSimulation();
     
     
     
     
 
     
+    // iphen, icont, n : nb tic, val min de phen, val max de phen 
     
     
     
