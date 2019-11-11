@@ -19,8 +19,9 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    int nbProcess(1);
-    int sizeSimulation(nbProcess*3 + 1); //sera remplacé par la methode XML
+    int nbTic = 1;
+    
+    int sizeSimulation(nbTic*3+1); //sera remplacé par la methode XML
     
     vector<Process*> environment;
     
