@@ -14,29 +14,32 @@
 
 #include "SimulationAgent.hpp"
 
+#include "Phenomenon.hpp"
+#include "State.hpp"
+#include "Controller.hpp"
+#include "Server.hpp"
+
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    int nbTic = 1;
-    
-    int sizeSimulation(nbTic*3+1); //sera remplacé par la methode XML
+    int nbTic = 1; //sera remplacé par le XML
     
     vector<Process*> environment;
     
-    for ( int i(0); i < sizeSimulation-1; i+=3)
+    for ( int i(0); i < nbTic; i++)
     {
-        environment[i] = new Phenomenon();
-        environment[i+1] = new State();
-        environment[i+2] = new Controller();
+        environment.push_back(new State());
+        environment.push_back(new Phenomenon());
+        environment.push_back(new Controller());
     }
     
-    environment[sizeSimulation-1] = new Server();
+    environment.push_back(new Server());
    
-    SimulationAgent SimulationAgent(sizeSimulation);
+    SimulationAgent SimulationAgent;
     
-    SimulationAgent.initializationOfSimulation();
+    SimulationAgent.initializationOfSimulation(environment);
     
     SimulationAgent.runSimulation();
 
