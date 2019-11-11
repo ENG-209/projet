@@ -18,7 +18,10 @@
 #include <iostream>
 #include "Process.hpp"
 #include "Subject.hpp"
+#include "State.hpp"
 using namespace std;
+
+class State; 
 
 class Controller : public Process, public Subject 
 {
@@ -30,14 +33,7 @@ Controller(std :: string name): Process(), Subject(name), name_(name), m_ctrlVal
 
 }
 
-void put_state(double valState); 
-
-double calculValCtrl (double valSat, double valPhen);
-
-double getValCtrl();
-
-double get_ValPhen();
-//void put_ValPhen_controller(double ValPhen);
+double calculValCtrl (double valSat, double valPhen); //calcule la ValCtrl
 
 virtual ~Controller()  //destructeur 
 {
@@ -49,11 +45,19 @@ void run();
 
 private:
 
-   std :: string name_;
+	State* p_State; 
+	
+	std :: string name_;
    double m_ctrlVal;
    double m_satVal;
    double m_initState;
-   double m_valPhen; //il lui faut la valPhen pour calculer la valeur de controle 
+   double m_valPhen;
+   
+   double get_valPhen_State();  //lis valPhen depuis State avec un pointeur sur State (le controlleur est l'initiateur)
+   
+   double get_initState_State();  // lis initState depuis State avec un pointeur sur State (le controlleur est l'initiateur)
+   
+   void put_valCtrl_State(double valCtrl);  //mets ValCtrl dans State avec un pointeur sur State (le controlleur est l'initiateur)
 
 };
 

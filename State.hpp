@@ -27,11 +27,17 @@ class State : public Process
 	
 	public: 
 	
-	State();
+	State(double phenFactor, double ctrlFactor);  //constructeur
 	
-	//void put(double valPhenRecieved); //recoit la valeur depuis Phenomenon et la stocke. (Phenomenon "put" valPhen dans controlleur
+	void calcul_finalState(); //calcul de l'état final
 	
-	double calcul_finalState();
+	void put_valPhen_State(double valPhenRecieved); //Phenomenon met ValPhen dans State (State est la cible)
+	
+	double get_valPhen_State(); //Controlleur lis la ValPhen depuis State avec un pointeur sur State (State est la cible)
+	
+	double get_initState_State();  //Controlleur lis la valeur de initState avec un pointeur sur State(State est la cible)
+	
+	void put_valCtrl_State(double valCtrl); //Controlleur met la ValCtrl dans State avec un pointeur sur State (State est la cible)
 	
 	
 	private: 
@@ -40,19 +46,9 @@ class State : public Process
 	double m_finalState; //OK
 	double m_phenFactor; //OK?
 	double m_ctrlFactor; //OK?
-	double m_valPhen;    //OK (transmise)
-	double m_valCtrl;    //OK (transmise)
-	
-	Controller* p_controller;
-	Phenomenon* p_phenomenon;
-	
-	void put_state(double valState);
-	
-	double getValCtrl(); 
-	
-	double getValPhen_state();
-	
-	
+	double m_valPhen;    ///OK (transmise)
+	double m_valCtrl;    ///OK (transmise)
+
 };
 
 

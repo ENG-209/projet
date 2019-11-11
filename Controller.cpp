@@ -21,19 +21,28 @@ using namespace std;
 
 
 
-void Controller :: put_state(double valState) 
+double Controller :: get_valPhen_State()
 {
 	
-	m_initState = valState; 
+	double val = p_State->get_valPhen_State();
+	
+	return val;
 	
 }
 
-//void Controller :: put_ValPhen_controller(double ValPhen)
-//{
+double Controller :: get_initState_State()
+{
 	
-	//m_valPhen = ValPhen; 
+	double val = p_State->get_initState_State();
 	
-//}
+	return val;
+}
+
+void Controller:: put_valCtrl_State(double valCtrl)
+{
+	p_State->put_valCtrl_State(valCtrl);
+	
+}
 
 
 double Controller :: calculValCtrl (double valSat, double valPhen)
@@ -55,16 +64,6 @@ double Controller :: calculValCtrl (double valSat, double valPhen)
 	
 } 
 
-
-double Controller :: getValCtrl ()
-{
-	
-	return m_ctrlVal;
-}
-
-double Controller::get_ValPhen(){
-	return m_valPhen;
-}
 
 void Controller:: run(){
 	

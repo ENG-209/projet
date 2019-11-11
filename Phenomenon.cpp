@@ -21,43 +21,16 @@
 #include "Process.hpp"
 #include "State.hpp"
 
-Phenomenon ::Phenomenon(State* state):Process(), m_minVal(0), m_maxVal(100)
+Phenomenon ::Phenomenon(State* state):Process(), p_state(state), m_minVal(0), m_maxVal(100)
 {
 	
 }
 
-void Phenomenon::put(double valPhen) /// OK. PERMIS.
+void Phenomenon::put_valPhen_State(double valPhen) 
 {
 	
-	p_state->put(m_valPhen);   
+	p_state->put_valPhen_State(valPhen);   
 }
 
-
-/// NON.PAS PERMIS. 
-
-//void Phenomenon :: put_ValPhen_controller()
-{
-	//il faut là un moyen pour pouvoir appeller une fonction publique d'une autre classe dans cette classe -> pointeur sur controlleur !!
-	
-	//p_controller->put_ValPhen_controller(m_valPhen);
-	
-//}
-	
-	
-double Phenomenon::getValPhen_state()
-{
-	
-	return m_valPhen; 
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 #endif /* Phenomenon_hpp */

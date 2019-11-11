@@ -23,66 +23,46 @@
 using namespace std; 
 
 
-State::State(Controller* controller, Phenomenon* phenomenon) : Process(), m_initState(0), m_phenFactor(10), m_ctrlFactor(20) 
+State::State(double phenFactor, double ctrlFactor) : Process(), m_initState(0), m_phenFactor(phenFactor), m_ctrlFactor(ctrlFactor)
 {
 	
-	m_valPhen = getValPhen_state(); 
-	
-	m_valCtrl = getValCtrl(); 
-
-
-}
-
-//void State::put (double valPhenRecieved)     //ici, on est dans une méthode de state, donc on peut accéder à touts ses attributs
-//{ 
-//	m_valPhen = valPhenRecieved; 
-//}
-	
-	
-void State :: put_state (double valState)
-{
-	
-	p_controller->put_state(valState);
-
-}
-	
-double State :: getValCtrl () //on aura besoin d'utiliser cette fonction 
-{
-	double m_valCtrl = p_controller->getValCtrl();
-	
-	return m_valCtrl;     
 	
 }
 
-double State :: getValPhen_state ()
-{
-	
-	double ValPhen_recieved = p_phenomenon->getValPhen_state();
-	
-	return ValPhen_recieved;
-		
+void State::put_valPhen_State (double valPhenRecieved)     
+{ 
+
+	m_valPhen = valPhenRecieved; 
+
 }
 
-double State::calcul_finalState()
+
+double State :: get_valPhen_State()
 {
 	
+	return m_valPhen;
+	
+}
+
+double State:: get_initState_State()
+{
+	
+	return m_initState; 
+	
+}
+
+void State :: put_valCtrl_State(double valCtrl)
+{
+	
+	m_valCtrl = valCtrl;
+
+}
+
+void State::calcul_finalState()
+{
 	m_finalState = m_initState + (m_valPhen - m_initState)*m_phenFactor + (m_valCtrl - m_initState)*m_ctrlFactor;
-	
-	return m_finalState;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #endif /* Server_hpp */
