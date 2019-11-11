@@ -17,11 +17,13 @@
 
 class Process{
    
-public: 
-   
+public:
+    
+    Process();
+    virtual void run() = 0;
+    ~Process;
    
 protected:
-    virtual void run() = 0;
    
 
 

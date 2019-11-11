@@ -16,6 +16,7 @@
 #define SimulationAgent_hpp
 
 #include <vector>
+#include "Process.hpp"
 
 class Process; // déclaration avancée
 
