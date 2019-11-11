@@ -15,21 +15,37 @@
 #ifndef Phenomenon_hpp
 #define Phenomenon_hpp
 
+#include <iostream> 
 #include "Process.hpp"
-#include <iostream>
-using namespace std;
+#include "State.hpp"
 
-class Phenomenon : public Process
+
+
+class State;
+class Controller; 
+
+class Phenomenon: public Process
 {
+	
+	public: 
+	
+	Phenomenon(State* state);
+	
+	void run();
+	
+	private: 
+	
+	void put_valPhen_State(double valPhen);  // méthode qui sert à envoyer m_val_phen à State. 
+	
+	State* p_state;  
+	double m_minVal; 
+	double m_maxVal;
+	double m_valPhen; 
+	
 
-public:
-
-
-
-private:
-
-
+	
 };
+
 
 #endif /* Phenomenon_hpp */
 
