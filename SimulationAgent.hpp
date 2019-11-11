@@ -22,13 +22,14 @@ class Process; // déclaration avancée
 class SimulationAgent
 {
     public :
-    SimulationAgent();
-    void initializationOfSimulation(int nbProcess);
+    SimulationAgent(int sizeSimulation);
+    void initializationOfSimulation();
     void runSimulation();
     ~SimulationAgent();
     
     private :
     std::vector<Process*> m_simulation;
+    int m_sizeSimulation;
     
 };
 

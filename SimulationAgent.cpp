@@ -14,23 +14,24 @@
 
 #include "SimulationAgent.hpp"
 
-#include "Phenomenon.hpp"
-#include "State.hpp"
-#include "Controller.hpp"
-#include "Server.hpp"
 
+SimulationAgent::SimulationAgent(int sizeSimulation) : m_sizeSimulation(sizeSimulation)
+{}
 
-void SimulationAgent::initializationOfSimulation(int nbProcess)
+void SimulationAgent::initializationOfSimulation()
 {
+    // faire le modificateur de tableau
+    // changer les parametres des fonctions de SimAgent
+    // XML : // iphen, icont, n : nb tic, val min de phen, val max de phen
+    // ajouter tinyXML
+    // server : suj-obs et ecriture dans txt
     
-    vector<Process*> simulation(nbProcess);
-    
-    for ( int i(0); i < nbProcess*3-1; i+=3)
+}
+
+void SimulationAgent::runSimulation()
+{
+    for ( int i(0); i < m_sizeSimulation; i++)
     {
-        simulation[i] = new Phenomenon();
-        simulation[i+1] = new State();
-        simulation[i+2] = new Controller();
+        m_simulation[i]->run();
     }
-    
-    simulation[nbProcess*3-1] = new Server();
 }

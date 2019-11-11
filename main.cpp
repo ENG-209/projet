@@ -19,20 +19,26 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    int nbProcess = 1; //sera remplacé par la methode XML
+    int nbTic = 1;
+    
+    int sizeSimulation(nbTic*3+1); //sera remplacé par la methode XML
+    
+    vector<Process*> environment;
+    
+    for ( int i(0); i < sizeSimulation-1; i+=3)
+    {
+        environment[i] = new Phenomenon();
+        environment[i+1] = new State();
+        environment[i+2] = new Controller();
+    }
+    
+    environment[sizeSimulation-1] = new Server();
    
-    SimulationAgent SimulationAgent;
+    SimulationAgent SimulationAgent(sizeSimulation);
     
-    SimulationAgent.initializationOfSimulation(nbProcess);
+    SimulationAgent.initializationOfSimulation();
     
-    
-    
-    
-
-    
-    
-    
-    
+    SimulationAgent.runSimulation();
 
     return 0;
 }
