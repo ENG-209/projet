@@ -14,25 +14,18 @@
 
 #include "SimulationAgent.hpp"
 
-#include "Phenomenon.hpp"
-#include "State.hpp"
-#include "Controller.hpp"
-#include "Server.hpp"
 
 SimulationAgent::SimulationAgent(int sizeSimulation) : m_sizeSimulation(sizeSimulation)
 {}
 
 void SimulationAgent::initializationOfSimulation()
 {
+    // faire le modificateur de tableau
+    // changer les parametres des fonctions de SimAgent
+    // XML : // iphen, icont, n : nb tic, val min de phen, val max de phen
+    // ajouter tinyXML
+    // server : suj-obs et ecriture dans txt
     
-    for ( int i(0); i < m_sizeSimulation-1; i+=3)
-    {
-        m_simulation[i] = new Phenomenon();
-        m_simulation[i+1] = new State();
-        m_simulation[i+2] = new Controller();
-    }
-    
-    m_simulation[m_sizeSimulation-1] = new Server();
 }
 
 void SimulationAgent::runSimulation()
