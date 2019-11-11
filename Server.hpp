@@ -14,7 +14,37 @@
 
 #ifndef Server_hpp
 #define Server_hpp
+#include "Observer.hpp"
+#include "Process.hpp"
+#include <iostream> 
 
+class Controller;  //déclaration avancée 
+
+class Server : public Observer , public Process {
+	
+	public: 
+	
+	Server (std:: string name) : Observer(name)
+	{
+	
+	}
+	 
+	virtual ~Server()  //?? 
+	{
+		
+	}
+	
+	virtual void update(Subject* subject, std:: string message, double ValPhen, double InitState, double CtrlVal);
+	
+	private: 
+	
+	double m_valPhen_server;
+	double m_initState_server;
+	double m_ctrlVal_server; 	
+	
+};
+	
+	
 
 
 
