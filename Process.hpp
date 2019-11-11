@@ -20,7 +20,8 @@ class Process{
 public: 
    
    
-protected: 
+protected:
+    virtual void run() = 0;
    
 
 

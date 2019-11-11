@@ -14,8 +14,10 @@
 
 #ifndef Server_hpp
 #define Server_hpp
+
 #include "Observer.hpp"
 #include "Process.hpp"
+
 #include <iostream> 
 
 class Controller;  //déclaration avancée 
@@ -43,9 +45,6 @@ class Server : public Observer , public Process {
 	double m_ctrlVal_server; 	
 	
 };
-	
-	
-
 
 
 

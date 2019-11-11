@@ -23,7 +23,7 @@ class SimulationAgent
 {
     public :
     SimulationAgent();
-    void initializationOfSimulation();
+    void initializationOfSimulation(std::vector<Process*> &environment);
     void runSimulation();
     ~SimulationAgent();
     
