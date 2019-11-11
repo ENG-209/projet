@@ -30,6 +30,8 @@ class Server : public Observer , public Process {
 	{
 	
 	}
+    
+    virtual void run();
 	 
 	virtual ~Server()  //?? 
 	{

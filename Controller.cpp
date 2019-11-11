@@ -20,7 +20,6 @@
 using namespace std; 
 
 
-
 double Controller :: get_valPhen_State()
 {
 	
@@ -78,7 +77,11 @@ void Controller:: run(){
 	std :: cout << name_ <<":"<< std::endl;
 	
 	notify( "message");   //on est dans le mode push donc c'est le controlleur qui va notifier le serveur. 
-
+    
+    // recupere les valeurs ValPhen et initStat
+    // les envoies a server
+    // calcul valcontrol en fonction de ValPhen
+    // l'envoie a State
 }
 
 

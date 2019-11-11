@@ -28,6 +28,8 @@ class State : public Process
 	public: 
 	
 	State(double phenFactor, double ctrlFactor);  //constructeur
+    
+    virtual void run(); // calcul le nouvel etat
 	
 	void calcul_finalState(); //calcul de l'état final
 	

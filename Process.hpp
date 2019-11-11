@@ -21,7 +21,7 @@ public:
     
     Process();
     virtual void run() = 0;
-    ~Process;
+    virtual ~Process();
    
 protected:
    

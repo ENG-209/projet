@@ -16,6 +16,11 @@
 #include "Server.hpp" 
 
 
+void Server::run()
+{
+    // ecrit dans le fichier txt
+}
+
 void Server:: update (Subject* subject, std :: string message)
 {
 	

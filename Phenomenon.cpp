@@ -22,8 +22,11 @@
 #include "State.hpp"
 
 Phenomenon ::Phenomenon(State* state):Process(), p_state(state), m_minVal(0), m_maxVal(100)
+{}
+
+void Phenomenon::run()
 {
-	
+    //genere une valeur aleatoire
 }
 
 void Phenomenon::put_valPhen_State(double valPhen) 

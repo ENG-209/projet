@@ -32,6 +32,8 @@ Controller(std :: string name): Process(), Subject(name), name_(name), m_ctrlVal
 {
 
 }
+    
+    virtual void run();
 
 double calculValCtrl (double valSat, double valPhen); //calcule la ValCtrl
 
@@ -39,8 +41,6 @@ virtual ~Controller()  //destructeur
 {
 
 }
-
-void run();
 
 
 private:

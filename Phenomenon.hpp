@@ -31,7 +31,7 @@ class Phenomenon: public Process
 	
 	Phenomenon(State* state);
 	
-	void run();
+	virtual void run();
 	
 	private: 
 	

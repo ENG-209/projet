@@ -29,6 +29,11 @@ State::State(double phenFactor, double ctrlFactor) : Process(), m_initState(0), 
 	
 }
 
+void State::run()
+{
+    //calcul du nouvel etat;
+}
+
 void State::put_valPhen_State (double valPhenRecieved)     
 { 
 

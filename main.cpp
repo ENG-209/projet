@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     for ( int i(0); i < nbTic; i++)
     {
         environment.push_back(new State());
-        environment.push_back(new Phenomenon());
+        environment.push_back(new Phenomenon(environment[environment.size()-1]));
         environment.push_back(new Controller());
     }
     
