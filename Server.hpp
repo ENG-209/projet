@@ -15,7 +15,18 @@
 #ifndef Server_hpp
 #define Server_hpp
 
+#include"Process.h"
 
+class Server : public Process {
+   
+public:
+   
+   
+protected:
+   
+
+
+};
 
 
 

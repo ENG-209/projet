@@ -12,6 +12,30 @@
 * \date     28/10/2019
 */
 
+#include "SimulationAgent.hpp"
+
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int nbProcess = 1; //sera remplacé par la methode XML
+   
+    SimulationAgent SimulationAgent;
+    
+    SimulationAgent.initializationOfSimulation(nbProcess);
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    return 0;
+}
 
 
 

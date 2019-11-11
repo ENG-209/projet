@@ -23,7 +23,7 @@ class SimulationAgent
 {
     public :
     SimulationAgent();
-    void initializationOfSimulation();
+    void initializationOfSimulation(int nbProcess);
     void runSimulation();
     ~SimulationAgent();
     
